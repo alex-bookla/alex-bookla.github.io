@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>IT'S BUSIK BIRTHDAY</title>
-    <style
+    <link rel="stylesheet" href="public/bday.css">
     <script type='text/javascript'>
         msg = document.title;
         msg = "****** !!!! " + msg + " !!!! ******";
@@ -23,17 +23,25 @@
 </head>
 <body>
 <script>
-    function play() {
-        var audio = document.getElementById("audio");
+    function onTap() {
+        const audio = document.getElementById("audio")
         audio.play();
+        document.getElementById("cats").style.visibility = "visible";
+        document.getElementById("twentyfive").style.visibility = "visible";
+        document.getElementById("tap").style.visibility = "hidden";
+        document.getElementById("barsik").style.visibility = "visible";
     }
 </script>
 <audio id="audio" src="public/hamsterdance.mp3"></audio>
-<div style="position:relative;display:flex" onclick="play()">
-    <img src="public/cats.gif" alt="BUSIK BDAY" width="100%" style="position: absolute"/>
-    <img src="public/25.gif" alt="BUSIK BDAY" width="30%" style="position: absolute;top:512px"/>
-    <img src="public/tap.gif" alt="BUSIK BDAY" width="10%" style="position: absolute;right:35px"/>
+<div style="position:relative;display:flex">
+    <img src="public/cats.gif" alt="BUSIK BDAY" width="100%" id="cats" style="position: absolute;visibility: hidden"/>
+    <img src="public/25.gif" alt="BUSIK BDAY" width="30%" id="twentyfive" style="position: absolute;top:512px;visibility: hidden"/>
+    <img src="public/tap.gif" alt="BUSIK BDAY" width="10%" id="tap" style="position: absolute;right:35px" onclick="onTap()"/>
+    <div class="el-wrap x" style="position: absolute;visibility: hidden" id="barsik">
+        <div class="el y">
+            <img src='public/busik.jpg' alt="BUSIK BDAY" width="80%">
+        </div>
+    </div>
 </div>
-<img src='public/busik.jpg'>
 </body>
 </html>
