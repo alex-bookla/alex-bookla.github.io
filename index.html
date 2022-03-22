@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IT'S BUSIK BIRTHDAY</title>
+    <style
+    <script type='text/javascript'>
+        msg = document.title;
+        msg = "****** !!!! " + msg + " !!!! ******";
+        position = 0;
+
+        function scrollTitle() {
+            document.title = msg.substring(position, msg.length) + msg.substring(0, position);
+            position++;
+            if (position > msg.length) {
+                position = 0
+            }
+            window.setTimeout("scrollTitle()", 110);
+        }
+
+        scrollTitle();
+    </script>
+</head>
+<body>
+<script>
+    function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+    }
+</script>
+<audio id="audio" src="public/hamsterdance.mp3"></audio>
+<div style="position:relative;display:flex" onclick="play()">
+    <img src="public/cats.gif" alt="BUSIK BDAY" width="100%" style="position: absolute"/>
+    <img src="public/25.gif" alt="BUSIK BDAY" width="30%" style="position: absolute;top:512px"/>
+    <img src="public/tap.gif" alt="BUSIK BDAY" width="10%" style="position: absolute;right:35px"/>
+</div>
+<img src='public/busik.jpg'>
+</body>
+</html>
